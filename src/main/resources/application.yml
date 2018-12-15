@@ -1,0 +1,27 @@
+spring:
+  profiles:
+    active: dev
+  datasource:
+    url: jdbc:h2:mem:nm_db;MODE=MySQL
+    driver-class-name: org.h2.Driver
+  jpa:
+    database: HSQL
+    open-in-view: false
+
+server:
+  port: ${port:8080}
+  undertow:
+    max-http-post-size: 200000000
+    ioThreads: 15
+    workerThreads: 50
+  compression:
+    enabled: true
+    mimeTypes: text/xml, text/css, text/html, application/json
+    minResponseSize: 4096
+
+management:
+  endpoints:
+    web:
+      base-path: /manage
+      exposure:
+        include: env, flyway, heapdump, loggers, metrics, threaddump
