@@ -22,14 +22,14 @@ is done using an Angular filter and alpha sorting is left to a Spring Paging & S
 approach. The problem was solved using as conventional of means as possible and with a minimum amount of new code. A 
 couple JUnit tests are provided for illustration.
 
-##Limitations
+## Limitations
 1. Will not scale to a large number of things. There is no data paging between the browser and server, all 'things' are
    returned to the browser with each request.
 2. There is no security.
 
-##Basic architecture is as follows:
+## Basic architecture is as follows:
 
-####Back end
+#### Back end
 ````
 model
    Thing - JPA Entity
@@ -44,19 +44,19 @@ support
    PublicThingServiceResponse - Response from public rest service is unmarshalled into this simple POJO
 ````
 
-####Front end
+#### Front end
 ````
 index.html - SPA template
 thingController - AngularJS Controller
 thingService - AngularJS Service
 ````
 
-##Build
+## Build
 ````
 mvn package
 ````
 
-##Run
+## Run
 ````
 java -jar target/nm-0.0.1-SNAPSHOT.jar
 ````
@@ -66,5 +66,5 @@ Supports standard Spring property overrides. Eg..
 java -jar target/nm-0.0.1-SNAPSHOT.jar --server.port=9090
 ````
 
-##Reference
+## Reference
 [Todd Moto's Public API Project](https://github.com/toddmotto/public-apis)
