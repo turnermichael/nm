@@ -51,6 +51,15 @@ thingController - AngularJS Controller
 thingService - AngularJS Service
 ````
 
+## Management 
+The following Spring Actuator services are enabled and exposed under the /manage context path.
+* /env
+* /flyway
+* /heapdump
+* /loggers
+* /metrics
+* /threaddump
+
 ## Build
 ````
 mvn package
