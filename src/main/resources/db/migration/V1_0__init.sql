@@ -1,5 +1,5 @@
 CREATE TABLE IF NOT EXISTS thing (
-  id          BIGINT        NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  id          VARCHAR(36)   NOT NULL PRIMARY KEY,
 
   name        VARCHAR(255)  NOT NULL,
   description VARCHAR(1024) NOT NULL,
