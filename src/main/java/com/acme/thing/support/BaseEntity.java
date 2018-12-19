@@ -7,7 +7,6 @@ import org.springframework.data.annotation.LastModifiedDate;
 import javax.persistence.Id;
 import javax.persistence.MappedSuperclass;
 import java.time.Instant;
-import java.util.Date;
 import java.util.UUID;
 
 @MappedSuperclass
@@ -15,15 +14,15 @@ public abstract class BaseEntity {
 
     @Id
     @JsonIgnore
-    protected String id = UUID.randomUUID().toString();
+    private String id = UUID.randomUUID().toString();
 
     @CreatedDate
     @JsonIgnore
-    protected Instant created;
+    private Instant created;
 
     @LastModifiedDate
     @JsonIgnore
-    protected Instant modified;
+    private Instant modified;
 
     // object/entity identity
     // https://web.archive.org/web/20180402144531/http://www.onjava.com:80/pub/a/onjava/2006/09/13/dont-let-hibernate-steal-your-identity.html
